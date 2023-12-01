@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movie_recommended/features/movie_flow/landing/landing_screen.dart';
 import 'package:movie_recommended/theme/palette.dart';
 
 class MovieFlow extends StatefulWidget {
@@ -13,7 +14,14 @@ class _MovieFlowState extends State<MovieFlow> {
 
   void nextPage() {
     pageController.nextPage(
-        duration: const Duration(milliseconds: 600), curve: Curves.easeOutCubic);
+        duration: const Duration(milliseconds: 600),
+        curve: Curves.easeOutCubic);
+  }
+
+  void previousPage() {
+    pageController.previousPage(
+        duration: const Duration(microseconds: 600),
+        curve: Curves.easeOutCubic);
   }
 
   @override
@@ -28,7 +36,10 @@ class _MovieFlowState extends State<MovieFlow> {
       controller: pageController,
       physics: const NeverScrollableScrollPhysics(),
       children: [
-        Scaffold(body: Container(color: Palette.red500)),
+        LandingScreen(
+          nextPage: nextPage,
+          previousPage: previousPage,
+        ),
         Scaffold(body: Container(color: Palette.red100)),
         Scaffold(body: Container(color: Palette.red500)),
         Scaffold(body: Container(color: Palette.red100)),
