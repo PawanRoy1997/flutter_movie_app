@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movie_recommended/features/movie_flow/genre/genre_screen.dart';
 import 'package:movie_recommended/features/movie_flow/landing/landing_screen.dart';
 import 'package:movie_recommended/theme/palette.dart';
 
@@ -20,7 +21,7 @@ class _MovieFlowState extends State<MovieFlow> {
 
   void previousPage() {
     pageController.previousPage(
-        duration: const Duration(microseconds: 600),
+        duration: const Duration(milliseconds: 600),
         curve: Curves.easeOutCubic);
   }
 
@@ -40,7 +41,7 @@ class _MovieFlowState extends State<MovieFlow> {
           nextPage: nextPage,
           previousPage: previousPage,
         ),
-        Scaffold(body: Container(color: Palette.red100)),
+        GenereScreen(nextPage:nextPage, prevPage: previousPage),
         Scaffold(body: Container(color: Palette.red500)),
         Scaffold(body: Container(color: Palette.red100)),
         Scaffold(body: Container(color: Palette.red500)),

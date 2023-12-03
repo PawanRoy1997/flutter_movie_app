@@ -6,6 +6,7 @@ class CustomTheme {
     final theme = Theme.of(context);
     return ThemeData(
         brightness: Brightness.dark,
+        primaryColor: Palette.red500,
         primarySwatch: MaterialColor(Palette.red500.value, const {
           100: Palette.red100,
           200: Palette.red200,
@@ -17,6 +18,7 @@ class CustomTheme {
           800: Palette.red800,
           900: Palette.red900
         }),
+        primaryColorDark: Palette.red500,
         scaffoldBackgroundColor: Palette.almostBlack,
         appBarTheme:
             const AppBarTheme(elevation: 0, color: Palette.almostBlack),
