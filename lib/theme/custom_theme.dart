@@ -27,6 +27,7 @@ class CustomTheme {
           inactiveTrackColor: Colors.grey,
           thumbColor: Colors.white,
           valueIndicatorColor: Palette.red500,
+          valueIndicatorTextStyle: TextStyle(color: Colors.white),
           inactiveTickMarkColor: Colors.transparent,
           activeTickMarkColor: Colors.transparent
         ),

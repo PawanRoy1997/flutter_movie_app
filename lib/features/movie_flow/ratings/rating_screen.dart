@@ -58,8 +58,6 @@ class _RatingScreenState extends State<RatingScreen> {
               max: 10,
               divisions: 9,
               label: "${rating.ceil()}",
-              activeColor: theme.primaryColor,
-              inactiveColor: Colors.white,
             ),
             const Spacer(),
             PrimaryButton(onPressed: widget.nextPage, text: "Yes Please"),
