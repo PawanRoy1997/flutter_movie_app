@@ -22,6 +22,14 @@ class CustomTheme {
         scaffoldBackgroundColor: Palette.almostBlack,
         appBarTheme:
             const AppBarTheme(elevation: 0, color: Palette.almostBlack),
+        sliderTheme: const SliderThemeData(
+          activeTrackColor: Colors.white,
+          inactiveTrackColor: Colors.grey,
+          thumbColor: Colors.white,
+          valueIndicatorColor: Palette.red500,
+          inactiveTickMarkColor: Colors.transparent,
+          activeTickMarkColor: Colors.transparent
+        ),
         textTheme: theme.primaryTextTheme
             .copyWith(
                 labelLarge: theme.primaryTextTheme.labelLarge?.copyWith(
